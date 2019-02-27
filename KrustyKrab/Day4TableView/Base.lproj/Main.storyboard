@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Krusty Krab View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="KrustyKrabViewController" customModule="Day4TableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="mVb-j8-tBZ" kind="show" identifier="Pizza" id="dJS-9c-NhU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-979" y="62"/>
+        </scene>
+        <!--Pizza View Controller-->
+        <scene sceneID="WOa-gZ-xo3">
+            <objects>
+                <viewController id="mVb-j8-tBZ" customClass="PizzaViewController" customModule="Day4TableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rkS-iZ-ZcF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2jy-zO-q2H">
+                                <rect key="frame" x="60" y="80" width="200" height="132.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2jy-zO-q2H" secondAttribute="height" multiplier="193:128" id="XHu-yM-Yps"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pizzaLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIh-9e-2bZ">
+                                <rect key="frame" x="90" y="344" width="140" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tou-EM-rJi" firstAttribute="trailing" secondItem="aIh-9e-2bZ" secondAttribute="trailing" constant="90" id="4Xn-4e-ymo"/>
+                            <constraint firstItem="aIh-9e-2bZ" firstAttribute="leading" secondItem="Tou-EM-rJi" secondAttribute="leading" constant="90" id="MtQ-0W-r3s"/>
+                            <constraint firstItem="2jy-zO-q2H" firstAttribute="top" secondItem="Tou-EM-rJi" secondAttribute="top" constant="60" id="Ril-6S-yE5"/>
+                            <constraint firstItem="Tou-EM-rJi" firstAttribute="trailing" secondItem="2jy-zO-q2H" secondAttribute="trailing" constant="60" id="nR2-qG-jGo"/>
+                            <constraint firstItem="2jy-zO-q2H" firstAttribute="leading" secondItem="Tou-EM-rJi" secondAttribute="leading" constant="60" id="nTx-ND-vvS"/>
+                            <constraint firstItem="Tou-EM-rJi" firstAttribute="bottom" secondItem="aIh-9e-2bZ" secondAttribute="bottom" constant="200" id="xce-fv-0Pr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tou-EM-rJi"/>
+                    </view>
+                    <connections>
+                        <outlet property="pizzaToppingImage" destination="2jy-zO-q2H" id="b56-qk-Zsz"/>
+                        <outlet property="pizzaToppingLabel" destination="aIh-9e-2bZ" id="BdG-Bn-qLF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HFP-dV-bfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201" y="61"/>
+        </scene>
+    </scenes>
+</document>
